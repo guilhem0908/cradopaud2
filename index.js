@@ -13,12 +13,16 @@ client.on("message", async message => {
 msg = message.content.toLowerCase();
 
 if (msg.startsWith (prefix + "random-arme")) {
-  number = 127;
-  imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
-  message.channel.send ("Vous devez prendre:" , {files: ["./images/" + imageNumber + ".png"]} )
+  
+  let answers = ["Non :x:", "J'ai envie de dormir :zzz:", "Balec :face_palm:", "Peut être... :thinking:", "Absolument :interrobang:"]
+  let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.tag, message.author.displayAvatarURL)
+  .setColor("ORANGE")
+  .addField("Question :", question)
+  .addField("Réponse :", answers[Math.floor(Math.random() * answers.length)])
+message.channel.send(embed)
 }
 })
-
 
 function getRandomInt(min, max) {
 
