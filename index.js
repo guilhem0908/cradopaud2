@@ -7,7 +7,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.login(process.env.TOKEN);
+client.login("NjM0ODAxMzEwMDkyNDkyODEy.XhXbQQ.1sXct17TmYB2b_hvPM6WHOMWn1Y");
 
 client.on("message", async message => {
 msg = message.content.toLowerCase();
